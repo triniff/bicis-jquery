@@ -13,5 +13,7 @@ function validateForm(){
 	else if ($('#input-password').val() == "" || /^[a-zA-Z0-9!@#$%^&*]{6,16}$/.test($('#input-password').val()) == false || $('#input-password').val() == 123456 || $('#input-password').val() == 098765) {
 		$('.form-group:first').append('<span class="error"> Mínimo 6 caracteres </span>')
 	}
-	
+	else if ($('select').val() == 0) {
+		$('.form-group:last').append('<span class="error"> Debes seleccionar un tipo de bici </span>')
+	}
 }
